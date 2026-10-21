@@ -12,6 +12,7 @@
  * Allow nodetool garbagecollect to take a user defined list of SSTables (CASSANDRA-16767)
  * Add a guardrail for misprepared statements (CASSANDRA-21139)
 Merged from 6.0:
+ * Avoid codec lookup in Cassandra Stress (CASSANDRA-21702)
  * Fix use-after-free when Zstd dictionary compressor cache evicts concurrently with in-flight compression (CASSANDRA-21714)
  * Accord: Torn Single Partition Reads (CASSANDRA-21741)
  * Accord: Add support for ELSE/ELSE IF (CASSANDRA-21484)
@@ -88,6 +89,7 @@ Merged from 5.0:
  * Fix ThreadLocalReadAheadBuffer#fill() to throw a CorruptBlockException if chunk metadata and file size are out of sync (CASSANDRA-21519)
  * Fix memtable on-heap accounting drift in BTree.update and BTreeRow.merge (CASSANDRA-21472)
 Merged from 4.0:
+ * Fix incorrect fsync usage (CASSANDRA-21673)
  * Validate Digest.crc32 when zero-copy streaming SSTables (CASSANDRA-21694)
  * Avoid DNS lookup for hostname column in ClientsTable and GossipInfoTable (CASSANDRA-21539)
  * Separate memtable memory usage tracking from limit checking, and fixes a a flush writeBarrier deadlock (CASSANDRA-21019)
